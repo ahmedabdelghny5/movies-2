@@ -1,0 +1,19 @@
+<section class="my-5 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="w-100" [src]="imgPrefix+trendingMovies.poster_path" alt="">
+            </div>
+
+            <div class="col-md-8 d-flex align-items-center">
+                <div>
+                    <h1 class="text-warning">{{trendingMovies.original_title}}</h1>
+                    <p class="text-secondary">{{trendingMovies.overview}}</p>
+                    <h3><span class="text-warning">Status :</span> {{trendingMovies.status}}</h3>
+                    <h4><span class="text-warning">Title : </span>{{trendingMovies.title}}</h4>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

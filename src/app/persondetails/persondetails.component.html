@@ -1,0 +1,16 @@
+<section class="my-5 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="w-100" [src]="imgPrefix+trendingPerson.profile_path" alt="">
+            </div>
+
+            <div class="col-md-8 d-flex align-items-center">
+                <div>
+                    <h1 class="text-warning">{{trendingPerson.place_of_birth}}</h1>
+                    <p class="secondColor">{{trendingPerson.biography}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

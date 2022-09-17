@@ -1,0 +1,18 @@
+<div class="container my-5 ">
+    <div class="row py-5">
+        <div class="col-md-4 d-flex align-items-center">
+            <div>
+                <div class="brdr w-25 mb-4"></div>
+                <h2>Trending tv To Watch <br> Right Now</h2>
+                <p class="secondColor my-2">most watched tv by day</p>
+                <div class="brdr w-75 mt-4"></div>
+            </div>
+        </div>
+        <div *ngFor='let tv of tvMovies' class="col-md-2 my-2">
+            <a [routerLink]="['/tvdetails',tv.id]">
+                <img class="w-100" [src]="imgPrefix+tv.poster_path" alt="tv.name">
+                <h3 class="my-3 h4">{{tv.name}}</h3>
+            </a>
+        </div>
+    </div>
+</div>

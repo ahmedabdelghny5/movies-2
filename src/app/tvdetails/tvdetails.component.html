@@ -1,0 +1,28 @@
+<section class="my-5 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="w-100 vh-100" [src]="imgPrefix+trendingTv.backdrop_path" alt="">
+            </div>
+
+            <div class="col-md-6 d-flex align-items-center">
+                <div>
+                    <h1 class="text-warning">{{trendingTv.name}}</h1>
+                    <p class="text-secondary">{{trendingTv.overview}}</p>
+                    <p class="text-secondary">{{trendingTv.overview}}</p>
+                   
+                    <div>
+                        popularity :  <button class="btn btn-info">{{trendingTv.popularity}}</button> 
+                    </div>  <br>
+                    <div>
+                        vote_average :  <button class="btn btn-info">{{trendingTv.vote_average}}</button> 
+                    </div> <br>
+                    <div>
+                        first_air_date :  <button class="btn btn-info">{{trendingTv.first_air_date}}</button> 
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

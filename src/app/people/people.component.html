@@ -1,0 +1,18 @@
+<div class="container py-5 my-5">
+    <div class="row py-5">
+        <div class="col-md-4 d-flex align-items-center ">
+            <div>
+                <div class="brdr w-25 mb-4"></div>
+                <h2>Trending people To Watch <br> Right Now</h2>
+                <p class="secondColor my-2">most watched people by day</p>
+                <div class="brdr w-75 mt-4"></div>
+            </div>
+        </div>
+        <div *ngFor='let person of personMovies' class="col-md-2 py-2">
+            <a [routerLink]="['/persondetails',person.id]">
+                <img class="w-100" [src]="imgPrefix+person.profile_path" onerror="this.onerror=null;this.src='../../assets/images/img-not.jpg'" alt="person.name">
+                <h3 class="my-3 h6">{{person.name}}</h3>
+            </a>
+        </div>
+    </div>
+</div>

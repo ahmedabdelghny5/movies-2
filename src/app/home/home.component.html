@@ -1,0 +1,63 @@
+<app-homeheader></app-homeheader>
+
+<div class="container py-3">
+
+    <div class="row py-5">
+        <div class="col-md-3 d-flex align-items-center">
+            <div>
+                <div class="brdr w-25 mb-4"></div>
+                <h2>Trending Movies To Watch <br> Right Now</h2>
+                <p class="secondColor my-2">most watched movie by day</p>
+                <div class="brdr w-75 mt-4"></div>
+            </div>
+        </div>
+        <div *ngFor='let movie of trendingMovies' class="col-md-3">
+            <div class="movie my-2 position-relative">
+                <a [routerLink]="['/moviedetails',movie.id]">
+                    <div class="items">
+                        <img class="w-100" [src]="imgPrefix+movie.poster_path" alt="movie.title">
+                        <h3 class="my-3">{{movie.title}}</h3>
+                        <div class="voter">
+                            {{movie.vote_average}}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-5">
+        <div class="col-md-3 d-flex align-items-center">
+            <div>
+                <div class="brdr w-25 mb-4"></div>
+                <h2>Trending tv To Watch <br> Right Now</h2>
+                <p class="secondColor my-2">most watched tv by day</p>
+                <div class="brdr w-75 mt-4"></div>
+            </div>
+        </div>
+        <div *ngFor='let tv of tvMovies' class="col-md-3 ">
+            <div class="movie my-2">
+                <img class="w-100" [src]="imgPrefix+tv.poster_path" alt="tv.name">
+                <h3 class="my-3 h4">{{tv.name}}</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-5">
+        <div class="col-md-3 d-flex align-items-center ">
+            <div>
+                <div class="brdr w-25 mb-4"></div>
+                <h2>Trending people To Watch <br> Right Now</h2>
+                <p class="secondColor my-2">most watched people by day</p>
+                <div class="brdr w-75 mt-4"></div>
+            </div>
+        </div>
+        <div *ngFor='let person of personMovies' class="col-md-3 ">
+            <div class="movie my-2">
+                <img class="err w-100" [src]="imgPrefix+person.profile_path" onerror="this.onerror=null;this.src='../../assets/images/img-not.jpg'" alt="person.name">
+                <h3 class="my-3 h6">{{person.name}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
